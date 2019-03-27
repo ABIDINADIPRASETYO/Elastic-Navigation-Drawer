@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.ABIDINADIPRASETYO:gradientlayout:1.02@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/gradientlayout-1.02.aar/e48ad043ab9ffab735100f4efe2eb8f5/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/gradientlayout-1.02.aar/e48ad043ab9ffab735100f4efe2eb8f5/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.ABIDINADIPRASETYO/gradientlayout/1.02/2a2110bc795a23256dba5a59c616cfd31fc30b02/gradientlayout-1.02-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -14,13 +14,20 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import android.view.Gravity;
+
+
 import com.example.abidinflexiblenavdraw.SideBar;
 import com.example.abidinflexiblenavdraw.SimpleFantasyListener;
 import com.example.abidinflexiblenavdraw.Transformer;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements GooeyMenu.GooeyMenuInterface{
+
+    private Toast mToast;
 
     private DrawerLayout drawerLayout;
+
+    private GooeyMenu mGooeyMenu;
 
 
     @Override
@@ -44,7 +51,13 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+         mGooeyMenu = (GooeyMenu) findViewById(R.id.gooey_menu);
+        mGooeyMenu.setOnMenuListener(this);
     }
+
+
+
 
     private void setListener() {
         final TextView tipView = (TextView) findViewById(R.id.tipView);
@@ -134,6 +147,32 @@ public class MainActivity extends AppCompatActivity {
         } else if (view.getId() == R.id.userInfo) {
             startActivity(UniversalActivity.newIntent(this, "个人中心"));
         }
+    }
+
+
+    public void menuOpen() {
+        showToast("Menu Open");
+
+    }
+
+
+    public void menuClose() {
+        showToast( "Menu Close");
+    }
+
+
+    public void menuItemClicked(int menuNumber) {
+        showToast( "Menu item clicked : " + menuNumber);
+
+    }
+
+    private void showToast(String msg){
+        if(mToast!=null){
+            mToast.cancel();
+        }
+        mToast= Toast.makeText(this,msg,Toast.LENGTH_SHORT);
+        mToast.setGravity(Gravity.CENTER,0,0);
+        mToast.show();
     }
 
 }
